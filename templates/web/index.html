@@ -1,0 +1,15 @@
+{% extends 'web/base.html' %}
+{% block title %}
+首页———叶良辰的个人博客
+{% endblock %}
+{% block content %}
+
+  <main class="r_box">
+      {% for article in articles %}
+    <li>
+      <h3><a href="{{url_for('web.sel_content',id=article.id)}}">{{ article.title }}</a></h3>
+      <p>{{ article.describ }}</p>
+    </li>
+      {% endfor %}
+  </main>
+{% endblock %}

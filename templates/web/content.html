@@ -1,0 +1,16 @@
+{% extends 'web/base.html' %}
+{% block title %}
+首页———叶良辰的个人博客
+{% endblock %}
+{% block content %}
+
+  <main class="r_box">
+      {% for article in articles %}
+    <li>
+      <h3>{{ article.title }}</h3>
+      <hr>
+      <div>{{ article.content | safe}}</div>
+    </li>
+      {% endfor %}
+  </main>
+{% endblock %}
